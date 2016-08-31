@@ -1789,20 +1789,20 @@
               \\? |                                        # {?} unknown type
 
               (?:
-                {
+                {                                          # {{ foo: string, bar: number }} destructuring type
                   (?:
-                    \\,?
                     \\s*
                     [a-zA-Z_$]+[\\w$]*
                     (?:
                       \\.[\\w$]+
                     )*
-                    \\s*
                     (?:
-                      \\:
+                      \\s*
+                      [\\:\\,]
                       \\s*
                       [a-zA-Z_$]+[\\w$]*
-                    )?
+                    )*
+                    \\s*
                   )+
                 }
               ) |
