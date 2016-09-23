@@ -1826,6 +1826,7 @@
                       \\s*
                     )*
                   \\)
+                  (?:\\s*:\\s*[a-zA-Z_$]+\\s*)?         # {function(): string} function return type
                 )? |
 
                 (?:
@@ -1939,6 +1940,7 @@
                       \\s*
                     )*
                   \\)
+                  (?:\\s*:\\s*[a-zA-Z_$]+\\s*)?         # {function(): string} function return type
                 )? |
 
                 (?:
